@@ -1,0 +1,60 @@
+//odd and even checker in array
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("ENTER NUMBER OF ELEMENTS IN ARRAY :");
+        
+        int len=scanner.nextInt();
+        
+        int[] score = new int[len];
+        
+        System.out.println("NOW ENTER ALL ELEMENTS OF ARRAY :");
+        for(int i=0;i<len;i++){
+            score[i]=scanner.nextInt();
+        }
+    
+        
+        int[] even = new int[10];
+        int[] odd = new int[10];
+
+        int evenIndex = 0;   // tracks how many evens we have stored
+        int oddIndex = 0;    // tracks how many odds we have stored
+
+        // Separate even and odd numbers
+        for (int i = 0; i < score.length; i++) {
+            if (score[i] % 2 == 0) {
+                even[evenIndex] = score[i];
+                evenIndex++;
+            } else {
+                odd[oddIndex] = score[i];
+                oddIndex++;
+            }
+        }
+
+        // Print all elements
+        System.out.print("ALL ELEMENTS IN ARRAY ARE : ");
+        for (int i = 0; i < score.length; i++) {
+            System.out.print("  " + score[i]);
+        }
+        System.out.println();
+
+        // Print even numbers
+        System.out.print("ALL EVEN NUMBERS IN THIS ARRAY ARE : ");
+        for (int j = 0; j < evenIndex; j++) {
+            System.out.print("  " + even[j]);
+        }
+        System.out.println();
+
+        // Print odd numbers
+        System.out.print("ALL ODD NUMBERS IN THIS ARRAY ARE : ");
+        for (int j = 0; j < oddIndex; j++) {
+            System.out.print("  " + odd[j]);
+        }
+        System.out.println();
+    }
+}
