@@ -1,1 +1,22 @@
+import java.util.Scanner;
 
+public class Main {
+    public static long fac(int a) {
+        long factorial = 1;
+        for (int i = 1; i <= a; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int a = scanner.nextInt(); // factorial works for integers
+
+        long result = fac(a);
+        System.out.printf("FACTORIAL OF %d IS EQUAL TO %d", a, result);
+
+        scanner.close();
+    }
+}
