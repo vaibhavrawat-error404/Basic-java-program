@@ -1,24 +1,25 @@
 
 public class Main{
- public static void main(String[] args){
-  string name="My name is Vaibhav Rawat";
-  string [] vowels={a,e,i,o,u};
+    public static void main(String[] args){
+        String name="My name is Vaibhav Rawat";
+        String [] vowels={"a","e","i","o","u"};
 
-int z;
+        int z=0;
 
-for {int i=0;i<name.lenth();i++){
-  for(int j=0;j<vowels.length;j++){
-    if(name[i].equalsIgnoreCase(vowels[j])){
-      z+=1;
+        for (int i=0;i<name.length();i++)
+            {
+            for(int j=0;j<vowels.length;j++){
+                if(String.valueOf(name.charAt(i)).equalsIgnoreCase(vowels[j])){
+                    z+=1;
+                }
+            }
+        }
+
+
+
+            System.out.println("Intro to inspect for checking vowels is :");
+            System.out.println(name);
+            
+            System.out.printf("TOTAL NUMBER OF VOWELS IN INTRO ARE %d",z);
     }
     }
-   }
-
-
-System.out.println(name);
-
-
-
- System.out.print("TOTAL NUMBER OF VOWELS IN INTRO ARE %d",z);   
-}
-}
