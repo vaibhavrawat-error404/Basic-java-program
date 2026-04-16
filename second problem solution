@@ -56,5 +56,6 @@ public class Main {
             System.out.print("  " + odd[j]);
         }
         System.out.println();
+scanner.close();
     }
 }
